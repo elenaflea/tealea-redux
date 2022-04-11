@@ -260,6 +260,10 @@ body{
   color: #1c442d;
   
 }
+.vert:focus-visible, .noir:focus-visible, .noel:focus-visible, .rouge:focus-visible, .detox:focus-visible, .blanc:focus-visible {
+  background: #ffffff;
+  color: #1c442d;
+}
 .vert:active, .noir:active, .noel:active, .rouge:active, .detox:active, .blanc:active {
   background: #ffffff;
   color: #1c442d;
