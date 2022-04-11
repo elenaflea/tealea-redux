@@ -529,7 +529,7 @@ margin: 10px;
 .lineCart{
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
