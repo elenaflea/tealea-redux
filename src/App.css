@@ -1,31 +1,170 @@
+body{
+  margin :0;
+}
+
 .App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.shipping {
+  background: #f0c5a5;
+  color : #1C442D;
+  width: 100%;
+  height: 30px;
+  padding: 10px 0 0 0;
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.head{
+  background: #eee;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("./image/leaf1.png");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-position: left;
+  background-attachment: fixed;
+  
+}
+.smalLogo{
+  width: 75px;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
+.column {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.tete{
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color : #1C442D;
+  margin-top: 10px;
+}
+
+
+
+.soutitre{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color : #1C442D;
+  margin-top: 20px;
+}
+.about{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color : #1C442D;
+  margin-top: 2px;
+  width : 60%;
+}
+
+.tealealogo{
+  margin: 20px auto;
+  width :120px;
+ /* color: #1C442D;*/
+  color: #1A1C20;
+  animation: logo-scale infinite 5s linear;
+  animation-direction: alternate-reverse;
+}
+
+.tealealogo:hover{
+  /*color : #424242;*/
+  color : #000;
+}
+
+.myNav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  width: 100%;
+  
+}
+.hiddenNav{
+  display: none;
+
+}
+.secondeNav{
+  display: flex;
+  position: absolute;
+  
+  justify-content: center;
+  padding: 5px 5px 15px 5px;
+  background: #eeeeee;
+  width: 100%;
+  z-index: 100;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 5px 5px 15px 5px;
+  background: #eeeeee;
+  z-index: 100;
+  animation: glisse .5s ease-out;
+}
+
+.navLeft{
+  display: flex;
+  margin-right: auto;
+  align-items: flex-end;
+  margin-left: 100px;
+}
+.navRight{
+  display: flex;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.link {
+  padding: 10px 20px 5px 20px;
+  text-decoration: none;
+  color: #424242;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+.link:hover{
+  animation: move  0.3s linear;
+  animation-direction: alternate-reverse;
+}
+.linkSmall {
+  padding: 10px 20px 5px 20px;
+  text-decoration: none;
+  color: #424242;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .tealealogo {
+    animation: logo-scale infinite 5s linear;
+    animation-direction: alternate-reverse;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +175,608 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes logo-scale {
+  from {
+    transform: scale(1.0);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+@keyframes move {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+@keyframes glisse {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.back {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #424242;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+
+.change {
+  color: white;
+  padding: 10px;
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 10px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+.vert{
+  background: #1c442d;
+  border: 2px solid #1c442d;
+}
+.noir{
+  background: #2C3333;
+  border: 2px solid #2C3333;
+}
+.noel{
+  background: #8B5E83;
+  border: 2px solid #8B5E83;
+}
+.rouge{
+  background: #ad424c;
+  border: 2px solid #ad424c;
+}
+.detox{
+  background: #3FA796;
+  border: 2px solid #3FA796;
+}
+.blanc{
+  background: #d89027;
+  border: 2px solid #d89027;
+}
+.vert:focus, .noir:focus, .noel:focus, .rouge:focus, .detox:focus, .blanc:focus {
+  background: #ffffff;
+  color: #1c442d;
+  
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.product-card {
+  padding: 5px;
+ /* flex-grow: 1;
+  flex-basis: 10%;*/
+  text-align: center;
+}
+.frameimg {
+  overflow: hidden;
+  height: 260px;
+  width: 260px;
+}
+.frameimg360 {
+  overflow: hidden;
+  height: 360px;
+  width: 360px;
+}
+.phototea {
+  height: 260px;
+  width: 260px;
+}
+.imgTheCart{
+  height: 100px;
+  width: 100px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.phototea360 {
+  height: 360px;
+  width: 360px;
+
+}
+.phototea:hover, .phototea360:hover{
+    animation: tea-scale infinite 4s linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes tea-scale {
+  from {
+    transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -moz-transform:scale(1.2); 
+    -webkit-transform:scale(1.2);
+    -o-transform:scale(1.2);
+  }
+  to {
+    transform:scale(1.0);
+    -ms-transform:scale(1.0);
+    -moz-transform:scale(1.0); 
+    -webkit-transform:scale(1.0);
+    -o-transform:scale(1.0);
+  }
+}
+
+.teaname {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #424242;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #1C442D;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.span-tea{
+  font-weight: 500;
+  /*color: #ad424c;*/
+  color: #1c442d;
+  cursor: pointer;
+}
+.spanQuantity{
+  font-size: 18px;
+  font-weight: 600;
+  /*color: #ad424c;*/
+  color: #ad424c;
+  cursor: pointer;
+}
+.spanQuantityCart{
+  font-size: 22px;
+  font-weight: 400;
+  /*color: #ad424c;*/
+  color: #ad424c;
+  cursor: pointer;
+  
+}
+.ingredients {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  color: #424242;
+  font-weight: 300;
+  width: 200px;
+  margin: 3px auto;
+}
+.btnMore {
+  background: transparent;
+  border: none;
+  /* color: #ad424c;*/
+  color: #1c442d;
+  cursor: pointer;
+}
+.btnMore:hover, .span-tea:hover {
+  color: #ad424c;
+}
+.btn {
+  display: flex;
+  padding: 10px 0 0 0;
+}
+.addLine{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+.btnQuantity{
+  border: 2px solid #f0c5a5;
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+}
+.footer{
+  background: #88a693;
+  padding: 20px;
+}
+.footfoot {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+}
+.lena{
+  color: #1C442D;;
+}
+.footerhead{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.footerlinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 20px;
+  border-left: 1px solid white;
+}
+
+
+.footerlink {
+  color: #fff;
+  padding: 8px 20px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.green {
+  color: #1C442D;
+  font-size: 20px;
+  font-weight: 300;
+
+}
+.footerinput{
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.footerinput::placeholder{
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+.footerBtn{
+  background: transparent;
+  border: none;
+  color : #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.inputplace {
+  display: flex;
+  align-items: flex-start;
+  
+}
+.footerlinks i {
+  animation-name: blink;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+}
+.footerlinks input:focus + i {
+	display: none;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomline{
+  border-bottom: 1px solid white;
+}
+.btnSend{
+  background: #1C442D;
+  border: 2px solid #1C442D;
+  color : #fff;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btnSend:hover {
+  background: transparent;
+  border: 2px solid #1C442D;
+  color : #1C442D;
+}
+
+.inputcontact {
+padding: 10px;
+margin: 10px;
+}
+.cartHead {
+  display: flex;
+  justify-content: first baseline;
+  align-items: baseline;
+}
+.tetePanier{
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color : #1C442D;
+  padding: 10px;
+}
+.right{
+  float: right;
+}
+
+
+
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+.teaCart{
+  padding: 0 10px ;
+  margin-top: 0;
+  align-self: flex-start;
+}
+.lineCart{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+.panierBlock{
+  background: #d9e4dd;
+  width: 360px;
+  position: fixed;
+  margin: auto;
+  top: 80px;
+  right: 0;
+  border-radius: 3px;
+  z-index: 99;
+  
+}
+.fixedCartHead {
+ height: 50px;
+ padding-top: 10px;
+
+}
+.scrollArea {
+  overflow: hidden;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  
+  max-height: 60vh;
+  
+  scrollbar-width: thin;
+}
+hr{
+  width: 90%;
+  border-bottom: .1px solid #1C442D;
+  background-color: transparent;
+  height: .3px;
+  border-top: none;
+}
+.close{
+  display: none;
+}
+.open {
+  display: block;
+  
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.marginVingt{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
+@media all and (max-width : 1030px) {
+  
+  .products {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  
+  
+}
+
+@media all and (max-width : 1000px) {
+  .column {
+    flex-direction: column;
+  }
+  .products {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  .myNav, .secondeNav, .navLeft {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .navRight{
+    align-self: center;
+    margin-right: 0;
+  }
+  .navLeft{
+    align-self: center;
+    align-items: center;
+    margin: 0;
+  }
+  .sticky{
+    padding: 5px;
+  }
+  .soutitre, .about {
+    width: 80%;
+  }
+  .footerhead{
+    flex-direction: column;
+  }
+  .footerlinks{
+    border-left: none;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+    text-align: center;
+    align-items: center;
+  }
+  .panierBlock{
+    width: 100%;
+    top: 220px;
+  }
+
+  .scrollArea{
+    max-height: 40vh;
+  }
+  .paddingVingt{
+    padding: 10px 0;
+    margin-left: 20px;
+  }
+}
+
+@media all and (max-width : 500px) {
+  .column {
+    flex-direction: column;
+  }
+  .products {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  .myNav, .secondeNav, .navLeft {
+    flex-direction: column;
+  }
+  
+  .navLeft{
+    align-self: center;
+    align-items: center;
+    margin: 0;
+  }
+  .navRight{
+    align-self: center;
+    margin-right: 0;
+  }
+  .sticky{
+    padding: 0px;
+  }
+  .soutitre, .about {
+    width: 80%;
+  }
+  .panierBlock{
+    width: 100%;
+    top:220px;
+  }
+  
+  .scrollArea{
+    max-height: 33vh;
+  }
+}
+@media all and (max-width : 360px) {
+  .column {
+    flex-direction: column;
+  }
+  .products {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  .myNav, .secondeNav, .navLeft {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navLeft{
+    align-self: center;
+    align-items: center;
+    margin: 0;
+  }
+  .navRight{
+    align-self: center;
+    margin-right: 0;
+  }
+  .sticky{
+    padding: 0px;
+  }
+  .frameimg360, .phototea360{
+    width: 100%;
+  }
+  .soutitre, .about {
+    width: 80%;
+  }
+  .panierBlock{
+    top:220px;
+    width: 100%;
+  }
+  .scrollArea{
+    height: 40vh;
+  }
+}
+@media all and (max-width : 285px) {
+  .column {
+    flex-direction: column;
+  }
+  .products {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  .myNav, .secondeNav, .navLeft {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navLeft{
+    align-self: center;
+    align-items: center;
+    margin: 0;
+  }
+  .navRight{
+    align-self: center;
+    margin-right: 0;
+  }
+  .sticky{
+    padding: 0px;
+  }
+  .frameimg360, .phototea360{
+    width: 100%;
+  }
+  .soutitre, .about {
+    width: 60%;
+  }
+  .panierBlock{
+    top:220px;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .scrollArea{
+    max-height: 40vh;
+  }
+  .paddingVingt{
+    padding: 10px 0 0 10px;
+  }
+  .fixedCartHead{
+    width: 100%;
+    padding: 10px 0 0 10px;;
+  }
+  .secondeNav{
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+}
+
+
