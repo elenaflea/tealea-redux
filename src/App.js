@@ -36,7 +36,7 @@ function App() {
 };
 
 
-const [isActive, setActive] = useState(false);
+const [isActive, setActive] = useState(true);
 
 const toggleCart = () => {
   setActive(!isActive);
