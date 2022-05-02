@@ -120,6 +120,7 @@ body{
 .iconBurger{
   color: #1C442D;
   font-size: 18px;
+	border: none;
 }
 .burger{
   display: none;
