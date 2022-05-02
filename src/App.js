@@ -350,9 +350,9 @@ const myFunctionMobilePlus =()=>{
         </div>
 </div>
         <div className ="burger">
-            <a className="iconBurger" href="javascript:void(0);" onClick={myFunctionMobilePlus}>
+            <button className="iconBurger" href="javascript:void(0);" onClick={myFunctionMobilePlus}>
                 <i className="fa fa-bars"></i>
-            </a>
+            </button>
         </div>
 
         </div>
