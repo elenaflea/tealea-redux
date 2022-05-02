@@ -19,6 +19,7 @@ import Contact from './Components/Contact';
 import TotalArticlesNav from './Components/Cart/TotalArticlesNav';
 import { useState } from 'react';
 import MailContactForm from './Components/MailContactForm';
+
 // import CartModal from './Components/Cart/CartModal';
 
 function App() {
@@ -36,12 +37,25 @@ function App() {
 };
 
 
-const [isActive, setActive] = useState(false);
+const [isActive, setActive] = useState(true);
 
 const toggleCart = () => {
   setActive(!isActive);
 };
 
+
+const myFunctionMobilePlus =()=>{
+  let links = document.querySelector("#hiddenLinks");
+    if (links.style.display === "block" && window.innerWidth <= 1370) {
+        links.style.display = "none";
+    }
+    else {
+        links.style.display = "block";
+
+        
+    }
+
+}
 
   return (
     <Router >
@@ -52,7 +66,6 @@ const toggleCart = () => {
       <div className={isActive ? 'panierBlock close': 'panierBlock open'} >
       <Cart/>
       </div>
-
       <div className='App head'>
         <div className='cont '>
           <Link to="/">
@@ -283,7 +296,7 @@ const toggleCart = () => {
         <Link to="/contact" className='link'> CONTACT </Link>
 
         <span className='link'> | </span>
-
+{/*
         <Link to="/" className='link btnMore'> 
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"  viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -291,6 +304,7 @@ const toggleCart = () => {
           </svg>
           </Link>
 
+  */ }
           <Link to="/" className='link btnMore'> 
 
           <div className='cont'  >
@@ -327,20 +341,31 @@ const toggleCart = () => {
         <img src={ logotea } className="smalLogo" alt='logo' />
         
          </Link>
-        <Link to="/" className='linkSmall'> BOUTIQUE </Link>
-        <Link to="/about" className='linkSmall'> A PROPOS </Link>
-        <Link to="/contact" className='linkSmall'> CONTACT </Link>
+
+<div id='hiddenLinks'> 
+         <div className='columnLinks'> 
+        <Link to="/" className='linkSmall' onClick={myFunctionMobilePlus}> BOUTIQUE </Link>
+        <Link to="/about" className='linkSmall' onClick={myFunctionMobilePlus}> A PROPOS </Link>
+        <Link to="/contact" className='linkSmall' onClick={myFunctionMobilePlus}> CONTACT </Link>
+        </div>
+</div>
+        <div className ="burger">
+            <a className="iconBurger" href="javascript:void(0);" onClick={myFunctionMobilePlus}>
+                <i className="fa fa-bars"></i>
+            </a>
+        </div>
 
         </div>
         
     <div className='navRight'>
+      {/* 
     <Link to="/" className='link btnMore'> 
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"  viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
           <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
       </Link>
-
+*/}
     <Link to="/" className='link btnMore'> 
 
     <div className='cont'>

@@ -110,6 +110,20 @@ body{
   width: 100%;
   z-index: 100;
 }
+.columnLinks{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.iconBurger{
+  color: #1C442D;
+  font-size: 18px;
+}
+.burger{
+  display: none;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -195,9 +209,18 @@ body{
 @keyframes glisse {
   from {
     transform: translateY(-100px);
+    -ms-transform:translateY(-100px);
+    -moz-transform:translateY(-100px); 
+    -webkit-transform:translateY(-100px);
+    -o-transform:translateY(-100px);
   }
+  
   to {
     transform: translateY(0px);
+    -ms-transform:translateY(0px);
+    -moz-transform:translateY(0px); 
+    -webkit-transform:translateY(0px);
+    -o-transform:translateY(0px);
   }
 }
 
@@ -249,7 +272,14 @@ body{
 .vert:focus, .noir:focus, .noel:focus, .rouge:focus, .detox:focus, .blanc:focus {
   background: #ffffff;
   color: #1c442d;
-  
+}
+.vert:focus-visible, .noir:focus-visible, .noel:focus-visible, .rouge:focus-visible, .detox:focus-visible, .blanc:focus-visible {
+  background: #ffffff;
+  color: #1c442d;
+}
+.vert:active, .noir:active, .noel:active, .rouge:active, .detox:active, .blanc:active {
+  background: #ffffff;
+  color: #1c442d;
 }
 
 .products {
@@ -529,7 +559,7 @@ margin: 10px;
 .lineCart{
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
@@ -554,9 +584,13 @@ margin: 10px;
   overflow-x:hidden;
   overflow-y: scroll;
   
-  max-height: 60vh;
+  max-height: 48vh;
   
   scrollbar-width: thin;
+}
+.cardInfo{
+  width: 80%;
+  margin: auto;
 }
 hr{
   width: 90%;
@@ -589,7 +623,11 @@ hr{
   margin-left: 20px;
   margin-top: 10px;
 }
-
+.marginZero{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 2px 10px;
+}
 
 @media all and (max-width : 1030px) {
   
@@ -597,7 +635,19 @@ hr{
     width: 90%;
     justify-content: space-evenly;
   }
-  
+  .sticky{
+    padding: 0px;
+  }
+  nav , .secondeNav{
+    padding: 0px;
+    margin: 0;
+  }
+  .burger{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
   
 }
 
@@ -623,8 +673,21 @@ hr{
     align-items: center;
     margin: 0;
   }
+  .columnLinks{
+    flex-direction: column;
+}
+nav , .secondeNav{
+  padding: 10px 0px;
+  margin: 0;
+}
+.burger{
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 40px;
+}
   .sticky{
-    padding: 5px;
+    padding: 0px;
   }
   .soutitre, .about {
     width: 80%;
@@ -640,12 +703,12 @@ hr{
     align-items: center;
   }
   .panierBlock{
-    width: 100%;
-    top: 220px;
+    width: 90%;
+    top: 210px;
   }
 
   .scrollArea{
-    max-height: 40vh;
+    max-height: 35vh;
   }
   .paddingVingt{
     padding: 10px 0;
@@ -664,7 +727,12 @@ hr{
   .myNav, .secondeNav, .navLeft {
     flex-direction: column;
   }
-  
+  nav , .secondeNav{
+    padding: 0;
+  }
+  .footerlinks, .footerlink{
+    padding: 20px 0px;
+  }
   .navLeft{
     align-self: center;
     align-items: center;
@@ -674,6 +742,15 @@ hr{
     align-self: center;
     margin-right: 0;
   }
+  .columnLinks{
+    flex-direction: column;
+}
+.burger{
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
   .sticky{
     padding: 0px;
   }
@@ -681,12 +758,12 @@ hr{
     width: 80%;
   }
   .panierBlock{
-    width: 100%;
-    top:220px;
+    width: 95%;
+    top:200px;
   }
   
   .scrollArea{
-    max-height: 33vh;
+    max-height: 25vh;
   }
 }
 @media all and (max-width : 360px) {
@@ -713,6 +790,15 @@ hr{
   .sticky{
     padding: 0px;
   }
+  nav , .secondeNav{
+    padding: 0;
+  }
+  .burger{
+    display: block;
+  }
+  .footerlinks, .footerlink{
+    padding: 20px 0px;
+  }
   .frameimg360, .phototea360{
     width: 100%;
   }
@@ -720,11 +806,11 @@ hr{
     width: 80%;
   }
   .panierBlock{
-    top:220px;
+    top:100px;
     width: 100%;
   }
   .scrollArea{
-    height: 40vh;
+    height: 35vh;
   }
 }
 @media all and (max-width : 285px) {
@@ -748,6 +834,16 @@ hr{
     align-self: center;
     margin-right: 0;
   }
+  nav , .secondeNav{
+    padding: 0;
+  }
+  .burger{
+    display: block;
+    top:22px;
+  }
+  .footerlinks, .footerlink{
+    padding: 20px 0px;
+  }
   .sticky{
     padding: 0px;
   }
@@ -758,12 +854,13 @@ hr{
     width: 60%;
   }
   .panierBlock{
-    top:220px;
+    top:100px;
     width: 100%;
     padding: 10px 0;
   }
+  
   .scrollArea{
-    max-height: 40vh;
+    max-height: 35vh;
   }
   .paddingVingt{
     padding: 10px 0 0 10px;
