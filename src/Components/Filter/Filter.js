@@ -17,7 +17,6 @@ const Filter = () => {
             <button tabIndex="4" className='change rouge' onClick={ ()=> dispatch(filterCategory("rouge")) } > Rooibos - Thés Rouges </button>
             <button tabIndex="5" className='change blanc' onClick={ ()=> dispatch(filterCategory("blanc")) } > Thés Blancs </button> 
             <button tabIndex="6" className='change detox' onClick={ ()=> dispatch(filterCategory("detox")) } > Bien-être - Détox </button> 
-            
         </div>
     )
 }
