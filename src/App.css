@@ -769,6 +769,12 @@ nav , .secondeNav{
     padding: 10px 0;
     margin-left: 20px;
   }
+    .welcomePage{
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: unset;
+
+  }
 }
 
 @media all and (max-width : 500px) {
